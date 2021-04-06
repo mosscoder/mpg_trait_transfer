@@ -1,0 +1,1 @@
+ranges <- stack('www/target_ranges.gri')
