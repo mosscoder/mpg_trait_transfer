@@ -12,6 +12,8 @@ server <- function(input, output,session) {
                      color = 'lightgreen',
                      opacity = 0.5,
                      group = 'Overlay') %>%
+      addCircleMarkers(lng = sp_pts[1] %>% as.data.frame() %>% dplyr::select(X) %>% unlist(),
+                 lat = sp_pts[1] %>% as.data.frame() %>% dplyr::select(Y) %>% unlist(), radius =  1) %>%
       addControl(position = 'topleft', html = names(ranges)[1])
      
      m2 <- base_m %>%
@@ -19,6 +21,8 @@ server <- function(input, output,session) {
                       color = 'lightgreen',
                       opacity = 0.5,
                       group = 'Overlay') %>%
+       addCircleMarkers(lng = sp_pts[2] %>% as.data.frame() %>% dplyr::select(X) %>% unlist(),
+                  lat = sp_pts[2] %>% as.data.frame() %>% dplyr::select(Y) %>% unlist(), radius =  1) %>%
        addControl(position = 'topleft', html = names(ranges)[2])
      
      m3 <- base_m %>%
@@ -26,6 +30,8 @@ server <- function(input, output,session) {
                       color = 'lightgreen',
                       opacity = 0.5,
                       group = 'Overlay') %>%
+       addCircleMarkers(lng = sp_pts[3] %>% as.data.frame() %>% dplyr::select(X) %>% unlist(),
+                  lat = sp_pts[3] %>% as.data.frame() %>% dplyr::select(Y) %>% unlist(), radius =  1) %>%
        addControl(position = 'topleft', html = names(ranges)[3])
      
      m4 <- base_m %>%
@@ -33,6 +39,8 @@ server <- function(input, output,session) {
                       color = 'lightgreen',
                       opacity = 0.5,
                       group = 'Overlay') %>%
+       addCircleMarkers(lng = sp_pts[4] %>% as.data.frame() %>% dplyr::select(X) %>% unlist(),
+                  lat = sp_pts[4] %>% as.data.frame() %>% dplyr::select(Y) %>% unlist(), radius =  1) %>%
        addControl(position = 'topleft', html = names(ranges)[4])
      
      m5 <- base_m %>%
@@ -40,6 +48,8 @@ server <- function(input, output,session) {
                       color = 'lightgreen',
                       opacity = 0.5,
                       group = 'Overlay') %>%
+       addCircleMarkers(lng = sp_pts[5] %>% as.data.frame() %>% dplyr::select(X) %>% unlist(),
+                  lat = sp_pts[5] %>% as.data.frame() %>% dplyr::select(Y) %>% unlist(), radius =  1) %>%
        addControl(position = 'topleft', html = names(ranges)[5])
      
      m6 <- base_m %>%
@@ -47,6 +57,8 @@ server <- function(input, output,session) {
                       color = 'lightgreen',
                       opacity = 0.5,
                       group = 'Overlay') %>%
+       addCircleMarkers(lng = sp_pts[6] %>% as.data.frame() %>% dplyr::select(X) %>% unlist(),
+                  lat = sp_pts[6] %>% as.data.frame() %>% dplyr::select(Y) %>% unlist(), radius =  1) %>%
        addControl(position = 'topleft', html = names(ranges)[6])
     
     leafsync::sync(m1,m2,m3,m4,m5,m6)

@@ -1,10 +1,11 @@
 library(leaflet)
 library(leafsync)
 library(raster)
+library(rgdal)
 library(shiny)
 
-source('~/mpgPostdoc/projects/trait_transfer/app/ui.R')
-source('~/mpgPostdoc/projects/trait_transfer/app/server.R')
-source('~/mpgPostdoc/projects/trait_transfer/app/global.R')
+source('https://raw.githubusercontent.com/mosscoder/mpg_trait_transfer/main/global.R') #remote global
+source('https://raw.githubusercontent.com/mosscoder/mpg_trait_transfer/main/ui.R') #remote ui
+source('https://raw.githubusercontent.com/mosscoder/mpg_trait_transfer/main/server.R') #remote server
 
-runApp(ui = ui, server = server)
+shinyApp(ui = ui, server = server)
